@@ -1,0 +1,21 @@
+name: B
+
+on:
+  push:
+
+jobs:
+  main:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Generate
+        run: node b.js
+
+      - name: Push changes
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "chore: generate"
+          commit_author: "github-actions[bot] <41898282+github-actions[bot]@users.noreply.github.com>"
