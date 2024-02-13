@@ -8,6 +8,7 @@ jobs:
       - shell: bash
         run: |
           ls "C:\\Program Files\\"
-          LOCATION="C:\\Program Files\\taplo\\bin\\taplo.exe"
-          mkdir -p "$(dirname $LOCATION)"
+          mkdir -p "C:\\Program Files\\taplo\\bin\\"
+          touch "C:\\Program Files\\taplo\\bin\\a.txt"
+          cat a.txt
 
