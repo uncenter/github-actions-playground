@@ -9,6 +9,6 @@ jobs:
         run: |
           ls "C:\\Program Files\\"
           mkdir -p "C:\\Program Files\\taplo\\bin\\"
-          touch "C:\\Program Files\\taplo\\bin\\a.txt"
-          cat a.txt
+          echo "Hello, world!" > "C:\\Program Files\\taplo\\bin\\a.txt"
+          cat "C:\\Program Files\\taplo\\bin\\a.txt"
 
