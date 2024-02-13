@@ -1,0 +1,9 @@
+on:
+  push:
+
+jobs:
+  x:
+    runs-on: windows-latest
+    steps:
+      - shell: bash
+        run: ls "C:\Program Files\"
