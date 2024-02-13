@@ -6,4 +6,8 @@ jobs:
     runs-on: windows-latest
     steps:
       - shell: bash
-        run: ls "C:\\Program Files\\"
+        run: |
+          ls "C:\\Program Files\\"
+          LOCATION="C:\\Program Files\\taplo\\bin\\taplo.exe"
+          mkdir -p "$(dirname $LOCATION)"
+
