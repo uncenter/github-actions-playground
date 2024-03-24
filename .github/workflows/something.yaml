@@ -5,7 +5,7 @@ jobs:
   main:
     runs-on: ubuntu-latest
     steps:
-      - run: curl "$DEPLOY_HOOK"
+      - run: curl "$SUPER_SECRET"
         env:
-          SUPER_SECRET: "https://uncenter.dev"
+          SUPER_SECRET: ${{ secrets.SUPER_SECRET }}
         shell: bash
