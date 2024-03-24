@@ -1,0 +1,11 @@
+on:
+  push:
+
+jobs:
+  main:
+    runs-on: ubuntu-latest
+    steps:
+      - run: curl "$DEPLOY_HOOK"
+        env:
+          SUPER_SECRET: "https://uncenter.dev"
+        shell: bash
